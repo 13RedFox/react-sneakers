@@ -1,12 +1,13 @@
 import React from 'react';
+import styles from './Drawer.module.scss';
 
 function Drawer() {
   return (
-    <div style={{ display: 'none' }} className="overlay">
-      <div className="drawer">
+    <div style={{ display: 'none' }} className={styles.overlay}>
+      <div className={styles.drawer}>
         <h2 className="d-flex justify-between mb-30">
           Корзина
-          <button className="removeBtn">
+          <button className={styles.removeBtn}>
             <svg
               width="16"
               height="16"

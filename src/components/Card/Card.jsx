@@ -1,9 +1,14 @@
 import React from 'react';
+import styles from './Card.module.scss';
 
 function Card({ title, price, image }) {
+  const addToCart = () => {
+    console.log(123);
+  };
+
   return (
-    <div className="card">
-      <div className="favorite">
+    <div className={styles.card}>
+      <div className={styles.favorite}>
         <svg
           width="15"
           height="14"
@@ -20,7 +25,7 @@ function Card({ title, price, image }) {
           <span>Цена:</span>
           <b>{price} руб.</b>
         </div>
-        <button className="button">
+        <button className={styles.button} onClick={addToCart}>
           <img width={11} height={11} src="/img/plus.svg" alt="Plus" />
         </button>
       </div>
