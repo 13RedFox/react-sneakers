@@ -37,6 +37,7 @@ header {
 }
 
 .search-blog {
+  position: relative;
   border: 1px solid #f3f3f3;
   border-radius: 10px;
   padding: 0 15px;
@@ -46,6 +47,42 @@ header {
     padding: 13px 13px 15px;
     font-size: 16px;
     width: 200px;
+  }
+
+  .clear {
+    position: absolute;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    top: 10px;
+  }
+}
+
+.cartEmpty {
+  text-align: center;
+
+  p {
+    width: 280px;
+    line-height: 24px;
+  }
+
+  .greenButton {
+    width: 245px;
+    margin-top: 20px;
+
+    &:hover {
+      img {
+        transform: rotate(180deg) translateX(3px);
+      }
+    }
+
+    img {
+      position: relative;
+      top: 1px;
+      transform: rotate(180deg);
+      margin-right: 15px;
+      transition: transform 0.15s ease-in-out;
+    }
   }
 }
 
@@ -71,5 +108,37 @@ header {
 
   b {
     font-size: 14px;
+  }
+}
+
+.removeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border: 1px solid rgba(#dbdbdb, 0.2);
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
+
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    border: 1px solid rgba(#dbdbdb, 1);
+  }
+
+  svg {
+    path {
+      transition: all 0.15s ease-in-out;
+      fill: rgba(#b5b5b5, 0.3);
+    }
+  }
+
+  &:hover svg {
+    path {
+      fill: rgba(#b5b5b5, 1);
+    }
   }
 }

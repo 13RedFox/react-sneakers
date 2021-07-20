@@ -3,15 +3,23 @@ import styles from './Card.module.scss';
 
 function Card({ id, title, price, image, addToCart, addToFavorite }) {
   const [isAdded, setIsAdded] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   const handleAddToCart = () => {
     addToCart({ id, title, price, image });
     setIsAdded(!isAdded);
   };
 
+  const handleAddToFovorite = () => {
+    addToCart({ id, title, price, image });
+    setIsFavorite(!isFavorite);
+  };
+
   return (
     <div className={styles.card}>
-      <div className={styles.favorite} onClick={addToFavorite}>
+      <div
+        className={isFavorite ? styles.favoriteLike : styles.favorite}
+        onClick={handleAddToFovorite}>
         <svg
           width="15"
           height="14"
